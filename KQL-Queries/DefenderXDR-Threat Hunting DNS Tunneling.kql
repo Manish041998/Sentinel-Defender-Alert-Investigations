@@ -3,7 +3,6 @@
 ### DNS tunneling use either A records or TXT records for an infected host to receive data
 ### To exfiltrate data to a C2 server, the DNS queries for infected host will spike with long queried hostname
 
-```kusto
 let DNSHostnameLengthCheck = 40;
 DeviceEvents
 | where Timestamp > ago(30d)
